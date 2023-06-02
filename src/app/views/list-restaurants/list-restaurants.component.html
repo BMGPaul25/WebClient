@@ -1,33 +1,45 @@
 <div class="container">
-    <div class="header">
-      <h1>Listar Menus</h1>
+  <div class="header">
+    <h1>Listar Menus</h1>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h2>Menus</h2>
     </div>
-    <div class="card">
-      <div class="card-header">
-        <h2>Menus</h2>
-      </div>
-      <div class="card-content">
-        <table>
-          <thead>
-            <tr>
-              <th>Codigo de Menu</th>
-              <th>Nombre</th>
-              <th>Categoria</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let menu of menus; index as i">
-              <td data-label="Menu">M - {{menu.Id >9 ? menu.Id : "0"+menu.Id}}</td>
-              <td data-label="Nombre">{{menu.Nombre}}</td>
-              <td data-label="Categoria">{{menu.Categoria}}</td>
-              <td data-label="Acciones">
-                <button class="button">Editar</button>
-                <button class="button">Eliminar</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="card-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Codigo de Menu</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ngFor="let menu of menus; index as i">
+            <td data-label="Menu">M - {{menu.iD_Menu >9 ? menu.iD_Menu : "0"+menu.iD_Menu}}</td>
+            <td data-label="Nombre">{{menu.nombre}}</td>
+            <td data-label="Descripcion">{{menu.descripcion}}</td>
+            <td data-label="Precio">{{menu.precio}}</td>
+            <td data-label="Acciones">
+              <button class="button">Editar</button>
+              <button class="button">Eliminar</button>
+            </td>
+          </tr>
+          <tr *ngFor="let menu2 of menus2; index as i">
+            <td data-label="Menu">M - {{menu2.iD_Menu1 >9 ? menu2.iD_Menu1 : "0"+menu2.iD_Menu1}}</td>
+            <td data-label="Nombre">{{menu2.nombre1}}</td>
+            <td data-label="Descripcion">{{menu2.descripcion1}}</td>
+            <td data-label="Precio">{{menu2.precio1}}</td>
+            <td data-label="Acciones">
+              <button class="button">Editar</button>
+              <button class="button">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>

@@ -14,11 +14,19 @@ export class ListRestaurantsComponent implements OnInit{
   }
   menus : any = [{Id:1, Nombre: 'menu1', Categoria:'desayunos'}, {Id: 2, Nombre: 'menu2', Categoria: 'almuerzos'}, {Id: 3, Nombre:'menu3', Categoria:'cenas'}];
 
+  menus2 : any = [{Id:1, Nombre: 'menu1', Categoria:'desayunos'}, {Id: 2, Nombre: 'menu2', Categoria: 'almuerzos'}, {Id: 3, Nombre:'menu3', Categoria:'cenas'}];
+
+
   async getMenus(){
-    try{
-      const response = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
+
+    try {
+      const menuaux : any = []
+      const response = await axios.get('http://localhost:14461/api/personas');
+      const response1 = await axios.get('http://localhost:5141/api/personas');
       this.menus = response.data;
+      this.menus2 = response1.data;
       console.log(response);
+      console.log(response1);
     }
     catch(error)
     {
