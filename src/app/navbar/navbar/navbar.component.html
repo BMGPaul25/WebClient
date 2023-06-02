@@ -1,0 +1,24 @@
+<header>
+    <div class="logo">Restaurants</div>
+    <div class="hamburger" (click)="toggleNavBar()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <nav class="nav-bar" [ngClass]="{'active': isNavBarActive}">
+      <ul>
+        <li>
+          <a routerLink="/restaurants">Menu</a>
+        </li>
+        <li>
+          <a routerLink="/dishes">Platos</a>
+        </li>
+        <li>
+          <a routerLink="/menus">Restaurantes</a>
+        </li>
+        <li>
+          <a routerLink="/days">Dias</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
